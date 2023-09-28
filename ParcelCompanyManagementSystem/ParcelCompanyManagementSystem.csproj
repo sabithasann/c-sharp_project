@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB574480-BB34-4F76-AA6B-CDF359C4CFB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ParcelCompanyManagementSystem</RootNamespace>
+    <AssemblyName>ParcelCompanyManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Forms\Accountant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accountant.designer.cs">
+      <DependentUpon>Accountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Operator.Designer.cs">
+      <DependentUpon>Operator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Controls About\UC_About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls About\UC_About.designer.cs">
+      <DependentUpon>UC_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Accountant\UC_AboutAccountant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Accountant\UC_AboutAccountant.designer.cs">
+      <DependentUpon>UC_AboutAccountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Accountant\UC_AccountantHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Accountant\UC_AccountantHome.designer.cs">
+      <DependentUpon>UC_AccountantHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Accountant\UC_AccountantSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Accountant\UC_AccountantSettings.Designer.cs">
+      <DependentUpon>UC_AccountantSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Accountant\UC_CompanyEarnings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Accountant\UC_CompanyEarnings.designer.cs">
+      <DependentUpon>UC_CompanyEarnings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Accountant\UC_MerchantCashout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Accountant\UC_MerchantCashout.designer.cs">
+      <DependentUpon>UC_MerchantCashout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Manager\UC_AddEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Manager\UC_AddEmployee.Designer.cs">
+      <DependentUpon>UC_AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Manager\UC_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Manager\UC_Dashboard.Designer.cs">
+      <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Manager\UC_EditEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Manager\UC_EditEmployee.Designer.cs">
+      <DependentUpon>UC_EditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Manager\UC_ManagerHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Manager\UC_ManagerHome.designer.cs">
+      <DependentUpon>UC_ManagerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Manager\UC_ManagerSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Manager\UC_ManagerSettings.Designer.cs">
+      <DependentUpon>UC_ManagerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls My Profile\UC_Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls My Profile\UC_Profile.designer.cs">
+      <DependentUpon>UC_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_AddMerchant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_AddMerchant.Designer.cs">
+      <DependentUpon>UC_AddMerchant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_AddParcel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_AddParcel.Designer.cs">
+      <DependentUpon>UC_AddParcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_EditMerchant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_EditMerchant.Designer.cs">
+      <DependentUpon>UC_EditMerchant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_EditParcel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_EditParcel.Designer.cs">
+      <DependentUpon>UC_EditParcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_Merchant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_Merchant.Designer.cs">
+      <DependentUpon>UC_Merchant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_OperatorHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_OperatorHome.designer.cs">
+      <DependentUpon>UC_OperatorHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_SearchParcel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_SearchParcel.Designer.cs">
+      <DependentUpon>UC_SearchParcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_OperatorSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_OperatorSettings.Designer.cs">
+      <DependentUpon>UC_OperatorSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_TrackParcel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Operator\UC_TrackParcel.Designer.cs">
+      <DependentUpon>UC_TrackParcel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Accountant.resx">
+      <DependentUpon>Accountant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operator.resx">
+      <DependentUpon>Operator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="User Controls About\UC_About.resx">
+      <DependentUpon>UC_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Accountant\UC_AboutAccountant.resx">
+      <DependentUpon>UC_AboutAccountant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Accountant\UC_AccountantHome.resx">
+      <DependentUpon>UC_AccountantHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Accountant\UC_AccountantSettings.resx">
+      <DependentUpon>UC_AccountantSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Accountant\UC_CompanyEarnings.resx">
+      <DependentUpon>UC_CompanyEarnings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Accountant\UC_MerchantCashout.resx">
+      <DependentUpon>UC_MerchantCashout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Manager\UC_AddEmployee.resx">
+      <DependentUpon>UC_AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Manager\UC_Dashboard.resx">
+      <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Manager\UC_EditEmployee.resx">
+      <DependentUpon>UC_EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Manager\UC_ManagerHome.resx">
+      <DependentUpon>UC_ManagerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Manager\UC_ManagerSettings.resx">
+      <DependentUpon>UC_ManagerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls My Profile\UC_Profile.resx">
+      <DependentUpon>UC_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Operator\UC_AddMerchant.resx">
+      <DependentUpon>UC_AddMerchant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Operator\UC_AddParcel.resx">
+      <DependentUpon>UC_AddParcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Operator\UC_EditMerchant.resx">
+      <DependentUpon>UC_EditMerchant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Operator\UC_EditParcel.resx">
+      <DependentUpon>UC_EditParcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Operator\UC_Merchant.resx">
+      <DependentUpon>UC_Merchant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Operator\UC_OperatorHome.resx">
+      <DependentUpon>UC_OperatorHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Operator\UC_SearchParcel.resx">
+      <DependentUpon>UC_SearchParcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Operator\UC_OperatorSettings.resx">
+      <DependentUpon>UC_OperatorSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Operator\UC_TrackParcel.resx">
+      <DependentUpon>UC_TrackParcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
